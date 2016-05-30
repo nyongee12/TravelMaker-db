@@ -88,7 +88,6 @@ public class CameraActivity extends TravelActivity {
             //finish();
             //return;
         }
-        Toast.makeText(this, "create camera", 1).show();
 
         //mSurface.mCamera.autoFocus(mAutoFocus);
     }
@@ -102,8 +101,6 @@ public class CameraActivity extends TravelActivity {
             mShutter.setEnabled(success);
 
             mSurface.mCamera.takePicture(null, null, mPicture);
-            Toast.makeText(getApplicationContext(), "finish autofocus", 1).show();
-
         }
 
     };

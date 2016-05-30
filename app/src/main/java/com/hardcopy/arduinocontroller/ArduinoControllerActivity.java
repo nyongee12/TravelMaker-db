@@ -176,6 +176,8 @@ public class ArduinoControllerActivity extends TravelActivity implements View.On
 	public class ActivityHandler extends Handler {
 		@Override
 		public void handleMessage(Message msg) {
+
+			Show_Toast((String)msg.obj);
 			switch(msg.what) {
 			case Constants.MSG_DEVICD_INFO:
 				mTextLog.append((String)msg.obj+"a1");

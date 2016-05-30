@@ -46,7 +46,7 @@ public class ProductShow extends TravelActivity {
         detail_text = (TextView)findViewById(R.id.product_detail);
         go_back = (Button)findViewById(R.id.product_back);
 
-        detail_text.setText(album_name + " > " + name + " 무게 : " + weight);
+        detail_text.setText(album_name + " > " + name + "\n무게 : " + weight);
 
         BitmapFactory.Options bfo = new BitmapFactory.Options();
         bfo.inSampleSize = 2;

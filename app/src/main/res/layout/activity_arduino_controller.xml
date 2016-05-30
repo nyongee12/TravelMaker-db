@@ -20,33 +20,28 @@
 	        android:text="@string/blank_msg"
 	         />
     </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/scroll_serial_info"
-        android:layout_width="fill_parent"
-        android:layout_height="0dip"
-        android:layout_weight="2"
-        android:background="#e0e0e0">
-	    <TextView
-	        android:id="@+id/text_serial"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:textSize="12sp"
-	         />
-    </LinearLayout>
+
+    <com.hardcopy.arduinocontroller.MyCameraSurface
+        android:id="@+id/previewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_weight="10"
+        />
 
     <LinearLayout
         android:id="@+id/album_layout"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        >
         <Button
-            android:id="@+id/album_btn"
+            android:id="@+id/product_btn"
             android:layout_width="0dip"
             android:layout_height="50dip"
             android:layout_weight="1"
             android:textSize="14sp"
-            android:text="앨범리스트" />
+            android:text="돌아가기" />
     </LinearLayout>
     
     <LinearLayout

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_camera.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_camera.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_add_update_album.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_add_update_album.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_product_list.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_product_list.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/blank.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/blank.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_album_list.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_album_list.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_arduino_controller.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_arduino_controller.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/album_listview_row.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/album_listview_row.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_add_update_product.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_add_update_product.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/activity_product_show.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/activity_product_show.xml"
+    },
+    {
+        "merged": "/Users/yoon/Android/TravelMaker-connection_test-master/app/build/intermediates/res/merged/debug/layout/product_listview_row.xml",
+        "source": "/Users/yoon/Android/TravelMaker-connection_test-master/app/src/main/res/layout/product_listview_row.xml"
+    }
+]

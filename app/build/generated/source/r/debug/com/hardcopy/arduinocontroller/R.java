@@ -74,12 +74,10 @@ public final class R {
         public static final int activity_add_update_product=0x7f030001;
         public static final int activity_album_list=0x7f030002;
         public static final int activity_arduino_controller=0x7f030003;
-        public static final int activity_camera=0x7f030004;
-        public static final int activity_product_list=0x7f030005;
-        public static final int activity_product_show=0x7f030006;
-        public static final int album_listview_row=0x7f030007;
-        public static final int blank=0x7f030008;
-        public static final int product_listview_row=0x7f030009;
+        public static final int activity_product_list=0x7f030004;
+        public static final int activity_product_show=0x7f030005;
+        public static final int album_listview_row=0x7f030006;
+        public static final int product_listview_row=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f070000;

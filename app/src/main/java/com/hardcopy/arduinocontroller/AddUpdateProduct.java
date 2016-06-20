@@ -41,7 +41,7 @@ public class AddUpdateProduct extends TravelActivity {
         } else {
             update_view.setVisibility(View.VISIBLE);
             add_view.setVisibility(View.GONE);
-            PRODUCT_ID = Integer.parseInt(getIntent().getStringExtra("PRODUCT_ID"));
+            PRODUCT_ID = DataCenter.getProductId();
 
             Product c = dbHandler.Get_Product(PRODUCT_ID);
 
@@ -49,8 +49,8 @@ public class AddUpdateProduct extends TravelActivity {
             add_weight.setText(c.getWeight());
             // dbHandler.close();
         }
-        album_id = Integer.parseInt(getIntent().getStringExtra("ALBUM_ID"));
-        album_name = getIntent().getStringExtra("ALBUM_NAME");
+        album_id = DataCenter.getAlbumId();
+        album_name = DataCenter.getAlbumName();
 
         add_weight.addTextChangedListener(new TextWatcher() {
 
@@ -155,9 +155,6 @@ public class AddUpdateProduct extends TravelActivity {
                 view_product.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                         | Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                view_product.putExtra("ALBUM_ID", Integer.toString(album_id));
-                view_product.putExtra("ALBUM_NAME", album_name);
-
                 startActivity(view_product);
                 finish();
             }
@@ -175,8 +172,6 @@ public class AddUpdateProduct extends TravelActivity {
 
                 Log.e("ALBUM_ID in product a/u", Integer.toString(album_id));
 
-                view_product.putExtra("ALBUM_ID", Integer.toString(album_id));
-                view_product.putExtra("ALBUM_NAME", album_name);
                 startActivity(view_product);
                 finish();
             }

@@ -155,11 +155,11 @@ public class AlbumList extends TravelActivity {
 
                     Intent show_album = new Intent(activity,
                             ProductList.class);
-                    String album_id = v.getTag().toString();
-                    String album_name = db.Get_Album(Integer.parseInt(album_id)).getName();
+                    int album_id = Integer.parseInt(v.getTag().toString());
+                    String album_name = db.Get_Album(album_id).getName();
 
-                    show_album.putExtra("ALBUM_ID", album_id);
-                    show_album.putExtra("ALBUM_NAME", album_name);
+                    DataCenter.setAlbumId(album_id);
+                    DataCenter.setAlbumName(album_name);
 
                     activity.startActivity(show_album);
                 }
@@ -175,7 +175,7 @@ public class AlbumList extends TravelActivity {
                     Intent update_user = new Intent(activity,
                             AddUpdateAlbum.class);
                     update_user.putExtra("called", "update");
-                    update_user.putExtra("ALBUM_ID", v.getTag().toString());
+                    DataCenter.setAlbumId(Integer.parseInt(v.getTag().toString()));
                     activity.startActivity(update_user);
 
                 }

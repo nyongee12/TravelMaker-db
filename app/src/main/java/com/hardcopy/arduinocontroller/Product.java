@@ -7,11 +7,11 @@ package com.hardcopy.arduinocontroller;
 public class Product {
 
     // private variables
-    public int _id;
-    public int _album_id;
-    public String _name;
-    public String _path;
-    public String _weight;
+    private int _id;
+    private int _album_id;
+    private String _name;
+    private String _path;
+    private String _weight;
 
     public Product() {
     }

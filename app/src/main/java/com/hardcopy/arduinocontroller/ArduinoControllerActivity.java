@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.ContactsContract;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -90,8 +91,8 @@ public class ArduinoControllerActivity extends TravelActivity implements View.On
 		mProductList = (Button) findViewById(R.id.product_btn);
 		mProductList.setOnClickListener(this);
 
-		album_id = Integer.parseInt(getIntent().getStringExtra("ALBUM_ID"));
-		album_name = getIntent().getStringExtra("ALBUM_NAME");
+		album_id = DataCenter.getAlbumId();
+		album_name = DataCenter.getAlbumName();
 
 		// Initialize
 		mListener = new SerialListener();
@@ -162,8 +163,6 @@ public class ArduinoControllerActivity extends TravelActivity implements View.On
 			break;
 		case R.id.product_btn:
 			Intent i = new Intent(ArduinoControllerActivity.this, ProductList.class);
-			i.putExtra("ALBUM_ID", album_id);
-			i.putExtra("ALBUM_NAME", album_name);
 			startActivity(i);
 		default:
 			break;
@@ -216,11 +215,6 @@ public class ArduinoControllerActivity extends TravelActivity implements View.On
 				String con = (String)msg.obj;
 				//mTextLog.append(con + "\n");
 				if(con.charAt(0)!='a') { //사진촬영
-//					Intent intentSubActivity =
-//							new Intent(ArduinoControllerActivity.this, CameraActivity.class);
-//					intentSubActivity.putExtra("ALBUM_ID", Integer.toString(album_id));
-//					intentSubActivity.putExtra("ALBUM_NAME", album_name);
-//					startActivity(intentSubActivity);
 					readyCamera();
 				}
 				else { //무게와따

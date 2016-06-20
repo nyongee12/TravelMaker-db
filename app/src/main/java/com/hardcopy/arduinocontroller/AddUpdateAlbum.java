@@ -40,7 +40,7 @@ public class AddUpdateAlbum extends TravelActivity {
 
             update_view.setVisibility(View.VISIBLE);
             add_view.setVisibility(View.GONE);
-            ALBUM_ID = Integer.parseInt(getIntent().getStringExtra("ALBUM_ID"));
+            ALBUM_ID = DataCenter.getAlbumId();
 
             Album c = dbHandler.Get_Album(ALBUM_ID);
 

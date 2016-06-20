@@ -55,12 +55,10 @@ int layout activity_add_update_album 0x7f030000
 int layout activity_add_update_product 0x7f030001
 int layout activity_album_list 0x7f030002
 int layout activity_arduino_controller 0x7f030003
-int layout activity_camera 0x7f030004
-int layout activity_product_list 0x7f030005
-int layout activity_product_show 0x7f030006
-int layout album_listview_row 0x7f030007
-int layout blank 0x7f030008
-int layout product_listview_row 0x7f030009
+int layout activity_product_list 0x7f030004
+int layout activity_product_show 0x7f030005
+int layout album_listview_row 0x7f030006
+int layout product_listview_row 0x7f030007
 int string app_name 0x7f070000
 int string blank_msg 0x7f070001
 int string button1 0x7f070002

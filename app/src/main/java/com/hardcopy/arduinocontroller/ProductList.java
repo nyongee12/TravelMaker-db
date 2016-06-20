@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,8 +45,8 @@ public class ProductList extends TravelActivity {
             goto_album_list = (Button) findViewById(R.id.product_goto_album_list);
             album_name_txt = (TextView) findViewById(R.id.product_album_name);
 
-            ALBUM_ID = Integer.parseInt(getIntent().getStringExtra("ALBUM_ID"));
-            album_name = getIntent().getStringExtra("ALBUM_NAME");
+            ALBUM_ID = DataCenter.getAlbumId();
+            album_name = DataCenter.getAlbumName();
 
             Log.e("ALBUM ID", Integer.toString(ALBUM_ID));
 
@@ -63,8 +64,6 @@ public class ProductList extends TravelActivity {
                 Intent add_user = new Intent(ProductList.this,
                         ArduinoControllerActivity.class);
                 add_user.putExtra("called", "add");
-                add_user.putExtra("ALBUM_ID", Integer.toString(ALBUM_ID));
-                add_user.putExtra("ALBUM_NAME", album_name);
 
                 add_user.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                         | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -136,8 +135,6 @@ public class ProductList extends TravelActivity {
         // TODO Auto-generated method stub
         super.onResume();
 
-//        ALBUM_ID = Integer.parseInt(getIntent().getStringExtra("ALBUM_ID"));
-
         Log.e("ALBUM ID in Resume", Integer.toString(ALBUM_ID));
 
         Set_Referash_Data();
@@ -196,9 +193,7 @@ public class ProductList extends TravelActivity {
 
                     Intent update_user = new Intent(activity,
                             ProductShow.class);
-                    update_user.putExtra("PRODUCT_ID", v.getTag().toString());
-                    update_user.putExtra("ALBUM_ID", Integer.toString(ALBUM_ID));
-                    update_user.putExtra("ALBUM_NAME", album_name);
+                    DataCenter.setProductId(Integer.parseInt(v.getTag().toString()));
 
                     activity.startActivity(update_user);
 
@@ -215,9 +210,7 @@ public class ProductList extends TravelActivity {
                     Intent update_user = new Intent(activity,
                             AddUpdateProduct.class);
                     update_user.putExtra("called", "update");
-                    update_user.putExtra("PRODUCT_ID", v.getTag().toString());
-                    update_user.putExtra("ALBUM_ID", Integer.toString(ALBUM_ID));
-                    update_user.putExtra("ALBUM_NAME", album_name);
+                    DataCenter.setProductId(Integer.parseInt(v.getTag().toString()));
 
                     activity.startActivity(update_user);
 

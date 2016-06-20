@@ -7,10 +7,10 @@ package com.hardcopy.arduinocontroller;
 public class Album {
 
     // private variables
-    public int _id;
-    public String _name;
-    public String _path;
-    public String _plane;
+    private int _id;
+    private String _name;
+    private String _path;
+    private String _plane;
 
     public Album() {
     }
